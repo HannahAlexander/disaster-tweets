@@ -1,0 +1,13 @@
+{'accuracy_score_test': 0.792507204610951,
+ 'accuracy_score_train': 0.9279279279279279,
+ 'confusion_matrix_test': array([[754,  90],
+       [198, 346]], dtype=int64),
+ 'confusion_matrix_train': array([[3177,   86],
+       [ 314, 1973]], dtype=int64),
+ 'f1_score_test': 0.7061224489795918,
+ 'f1_score_train': 0.9079613437643811,
+ 'model_id': '20221013152438_cnn',
+ 'precision_score_test': 0.7935779816513762,
+ 'precision_score_train': 0.9582321515298688,
+ 'recall_score_test': 0.6360294117647058,
+ 'recall_score_train': 0.8627022299956275}
