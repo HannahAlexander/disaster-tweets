@@ -26,11 +26,11 @@ def main():
     model_name = f"Model_ID{model_id}.h5"
     print("Using model ", model_name)
 
-    validation_text = generateData("DHG_team/data/test.csv", dataset_type = "test")
+    validation_text = generateData("data/test.csv", dataset_type = "test")
     print("validation data read in: ", len(validation_text))
 
 
-    outputs_path = "DHG_team/models"
+    outputs_path = "models"
 
     file_name = f"{model_id}_tokenizer.pickle"
     full_path = os.path.join(outputs_path, file_name)
@@ -54,11 +54,11 @@ def main():
     print("Predictions generated")
 
     # convert to kaggle 
-    validation_data_in = pd.read_csv("DHG_team/data/test.csv")
+    validation_data_in = pd.read_csv("data/test.csv")
     validation_data_in["target"] = results
     validation_data_out = validation_data_in[["id", "target"]]
 
-    file_path = os.path.join("DHG_team", "data", f"{model_id}_submission.csv")
+    file_path = os.path.join("data", f"{model_id}_submission.csv")
     validation_data_out.to_csv(file_path, index=False)
     print("Output saved: ", file_path)
 
